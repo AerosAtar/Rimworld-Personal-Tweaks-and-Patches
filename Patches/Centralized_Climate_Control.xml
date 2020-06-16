@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Centralized Climate Control (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationTest">
+					<xpath>/Defs/ResearchProjectDef[defName="IndustrialClimateControl"]</xpath>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="IndustrialClimateControl"]/label</xpath>
+					<value>
+						<label>Commercial Climate Control</label>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

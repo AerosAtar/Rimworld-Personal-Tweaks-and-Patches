@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- Core -->
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/ThingDef[defName="Ambrosia"]/statBases/Nutrition</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName="Ambrosia"]/statBases/Nutrition</xpath>
+			</li>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/ThingDef[defName="Ambrosia"]/ingestible/preferability</xpath>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Ambrosia"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>NeverForNutrition</preferability>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/ThingDef[defName="Beer"]/statBases/Nutrition</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName="Beer"]/statBases/Nutrition</xpath>
+			</li>
+		</operations>
+	</Operation>
+
+	<!-- Apothecary https://steamcommunity.com/sharedfiles/filedetails/?id=2000244851 -->
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/ThingDef[defName="AYAbsinthe"]/statBases/Nutrition</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName="AYAbsinthe"]/statBases/Nutrition</xpath>
+			</li>
+		</operations>
+	</Operation>
+
+	<!-- Medecines+ https://steamcommunity.com/sharedfiles/filedetails/?id=1364582731 -->
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/ThingDef[defName="RoseTea"]/statBases/Nutrition</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName="RoseTea"]/statBases/Nutrition</xpath>
+			</li>
+		</operations>
+	</Operation>
+
+	<!-- Medical Supplements https://steamcommunity.com/sharedfiles/filedetails/?id=2004944243 -->
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/ThingDef[defName="MSEthanol"]/statBases/Nutrition</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName="MSEthanol"]/statBases/Nutrition</xpath>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/ThingDef[defName="MSGlycerol"]/statBases/Nutrition</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName="MSGlycerol"]/statBases/Nutrition</xpath>
+			</li>
+		</operations>
+	</Operation>
+
+	<!-- Social Supplements https://steamcommunity.com/sharedfiles/filedetails/?id=2005917068 -->
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/ThingDef[defName="SSHotSauce"]/statBases/Nutrition</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName="SSHotSauce"]/statBases/Nutrition</xpath>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/ThingDef[defName="SSPolyflowerJuice"]/statBases/Nutrition</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName="SSPolyflowerJuice"]/statBases/Nutrition</xpath>
+			</li>
+		</operations>
+	</Operation>
+
+	<!-- Vanilla Factions Expanded - Settlers https://steamcommunity.com/sharedfiles/filedetails/?id=2052918119 -->
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/ThingDef[defName="Chemshine"]/statBases/Nutrition</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName="Chemshine"]/statBases/Nutrition</xpath>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>

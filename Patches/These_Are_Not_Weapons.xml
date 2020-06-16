@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- Core -->
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/ThingDef[defName="Beer"]/tools</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName="Beer"]/tools</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName="Beer"]/equippedAngleOffset</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName="Beer"]/equipmentType</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName="Beer"]/comps/li/compClass[text()="CompEquippable"]</xpath>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/ThingDef[defName="Wood"]/tools</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName="Wood"]/tools</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName="Wood"]/equippedAngleOffset</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName="Wood"]/equipmentType</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName="Wood"]/comps/li/compClass[text()="CompEquippable"]</xpath>
+			</li>
+		</operations>
+	</Operation>
+
+	
+	<!-- Vanilla Animals Expanded - Ice Sheet https://steamcommunity.com/sharedfiles/filedetails/?id=1895364782 -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Animals Expanded — Ice Sheet</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationTest">
+					<xpath>/Defs/ThingDef[defName="AEXP_RawFish"]/tools</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="AEXP_RawFish"]/tools</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="AEXP_RawFish"]/equippedAngleOffset</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="AEXP_RawFish"]/equipmentType</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="AEXP_RawFish"]/comps/li/compClass[text()="CompEquippable"]</xpath>
+				</li>
+			</operations>
+		</match>
+	</Operation>	
+	
+	<!-- Vanilla Factions Expanded - Medieval https://steamcommunity.com/sharedfiles/filedetails/?id=2023513450 -->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Medieval</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationTest">
+					<xpath>/Defs/ThingDef[defName="VFEM_Wine"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEM_Wine"]/tools</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEM_Wine"]/equippedAngleOffset</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEM_Wine"]/equipmentType</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEM_Wine"]/comps/li/compClass[text()="CompEquippable"]</xpath>
+				</li>
+			</operations>
+		</match>
+	</Operation>	
+	
+	<!-- Vanilla Fishing Expanded https://steamcommunity.com/sharedfiles/filedetails/?id=1914064942 -->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Fishing Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationTest">
+					<xpath>/Defs/ThingDef[@ParentName="VCEF_RawFishBase"]/tools</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[@ParentName="VCEF_RawFishBase"]/tools</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[@ParentName="VCEF_RawFishBase"]/equippedAngleOffset</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[@ParentName="VCEF_RawFishBase"]/equipmentType</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[@ParentName="VCEF_RawFishBase"]/comps/li/compClass[text()="CompEquippable"]</xpath>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>

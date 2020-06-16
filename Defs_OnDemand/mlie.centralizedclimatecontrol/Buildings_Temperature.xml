@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="CentralizedClimateControlBuilding">
+    <defName>AdvancedIntakeFan</defName>
+    <label>AdvancedIntakeFan</label>
+    <thingClass>CentralizedClimateControl.Building_IntakeFan</thingClass>
+    <graphicData>
+      <drawSize>(2,2)</drawSize>
+      <texPath>Things/Building/LargeIntakeFan</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <size>(2,2)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <statBases>
+      <WorkToBuild>9600</WorkToBuild>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>100</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <description>An Advanced Intake Fan.</description>
+    <costList>
+      <Steel>800</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <building>
+      <canPlaceOverWall>true</canPlaceOverWall>
+    </building>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>600</basePowerConsumption>
+      </li>
+      <li Class="CentralizedClimateControl.CompProperties_AirFlow">
+        <compClass>CentralizedClimateControl.CompAirFlowProducer</compClass>
+        <baseAirFlow>4500</baseAirFlow>
+        <flowType>Any</flowType>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+    </comps>
+    <designationCategory>CentralClimateControl</designationCategory>
+    <designationHotKey>Misc4</designationHotKey>
+    <researchPrerequisites>
+      <li>AdvancedClimateControl</li>
+    </researchPrerequisites>
+    <placeWorkers>
+      <li>CentralizedClimateControl.PlaceWorker_IntakeFan</li>
+    </placeWorkers>
+  </ThingDef>
+  
+  <ThingDef ParentName="CentralizedClimateControlBuilding">
+    <defName>AdvancedAirThermal</defName>
+    <label>AdvancedAirThermal</label>
+    <thingClass>CentralizedClimateControl.Building_AirThermal</thingClass>
+    <graphicData>
+      <texPath>Things/Building/LargeAirThermal</texPath>
+      <drawSize>(2,2)</drawSize>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <size>(2,2)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <statBases>
+      <WorkToBuild>9600</WorkToBuild>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>80</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <description>A Air Heater for heating Air.</description>
+    <costList>
+      <Steel>1200</Steel>
+      <ComponentIndustrial>18</ComponentIndustrial>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <building>
+      <canPlaceOverWall>true</canPlaceOverWall>
+    </building>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>900</basePowerConsumption>
+      </li>
+      <li Class="CentralizedClimateControl.CompProperties_AirFlow">
+        <compClass>CentralizedClimateControl.CompAirFlowTempControl</compClass>
+        <flowType>Any</flowType>
+        <thermalCapacity>13500</thermalCapacity>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_TempControl" />
+      <li Class="CompProperties_Breakdownable" />
+    </comps>
+    <designationCategory>CentralClimateControl</designationCategory>
+    <designationHotKey>Misc4</designationHotKey>
+    <researchPrerequisites>
+      <li>AdvancedClimateControl</li>
+    </researchPrerequisites>
+    <placeWorkers>
+      <li>CentralizedClimateControl.PlaceWorker_AirThermal</li>
+    </placeWorkers>
+  </ThingDef>
+  
+</Defs>

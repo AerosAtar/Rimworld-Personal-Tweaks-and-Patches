@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- Core -->
+	
+	<!-- More Gloomy Walls https://steamcommunity.com/sharedfiles/filedetails/?id=2073589285 -->
+	<!-- Reinforced embrasures cover amount -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>MoreGloomyWalls</li>
+		</mods>	
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationTest">
+					<xpath>/Defs/ThingDef[defName="GL_HeavyWallEmb"]/fillPercent</xpath>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="GL_HeavyWallEmb"]/fillPercent</xpath>
+					<value>
+						<fillPercent>0.99</fillPercent>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<!-- Age Matters Updated https://steamcommunity.com/sharedfiles/filedetails/?id=2010940147 -->
+	<!-- Adjust speed of recovery from Youth HeDiff to match increased aging speed -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Age Matters Updated</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationTest">
+					<xpath>/Defs/HediffDef[defName="Youth"]</xpath>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/HediffDef[defName="Youth"]/comps/li/severityPerDay</xpath>
+					<value>
+						<!-- default value [-0.0014] multiplied by modifier of increased speed mod -->
+						<severityPerDay>-0.014</severityPerDay>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>

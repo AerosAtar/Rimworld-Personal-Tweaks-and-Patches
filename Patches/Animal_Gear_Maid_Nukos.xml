@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- Animal Gear + Nuko Handmaids -->
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/ThingDef[defName="Nukoidbell"]/apparel/tags</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="Nukoidbell"]/apparel/tags</xpath>
+				<value>
+					<li>AnimalCompatible</li>
+					<li>Maidnukos</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/ThingDef[defName="xmasantlers"]/apparel/tags</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="xmasantlers"]/apparel/tags</xpath>
+				<value>
+					<li>AnimalCompatible</li>
+					<li>Maidnukos</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>

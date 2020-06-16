@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- Medical IVs https://steamcommunity.com/sharedfiles/filedetails/?id=1424438685 -->
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/ThingDef[defName="Painkillers"]</xpath>
+			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName="Painkillers"]</xpath>
+				<value>
+					<li Class="MSPainless.MSPainDrug">
+						<ManagesPain>true</ManagesPain>
+					</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	
+</Patch>

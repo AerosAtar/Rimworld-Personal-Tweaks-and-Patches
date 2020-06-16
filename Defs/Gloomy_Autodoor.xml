@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<ThingDef ParentName="DoorBase">
+		<defName>AA_AutoDoorOld</defName>
+		<label>classic auto door</label>
+		<description>Divides rooms. Powered operation allows people to move through the door without slowing down.</description>
+		<thingClass>Building_Door</thingClass>
+		<statBases>
+			<WorkToBuild>1500</WorkToBuild>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Furniture/DoorOld_Mover</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<damageData>
+				<enabled>false</enabled>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/Furniture/DoorOld_MenuIcon</uiIconPath>
+		<stuffCategories Inherit="False">
+			<li>Woody</li>
+		</stuffCategories>
+		<costStuffCount>45</costStuffCount>
+		<costList>
+			<Steel>40</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<designationHotKey>Misc12</designationHotKey>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>50</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Breakdownable"/>
+		</comps>
+		<researchPrerequisites>
+			<li>Autodoors</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<building>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Furniture/DoorOld_Blueprint_Atlas</texPath>
+			</blueprintGraphicData>
+		</building>
+		<designationCategory>OldStyleFurniture</designationCategory>
+	</ThingDef>
+	
+</Defs>
